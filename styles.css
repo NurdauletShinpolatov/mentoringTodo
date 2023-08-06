@@ -1,0 +1,141 @@
+*{
+  font-family: 'Quicksand';
+  font-weight: 500;
+}
+
+body{
+  margin: 0px 0px 0px 0px;
+}
+
+i{
+  cursor: pointer;
+}
+
+i:hover{
+  color: #4094f7;
+}
+
+/* ================================================== */
+.wrapper {
+  padding-top: 2rem;
+  min-height: 100vh;
+  background: #cecece;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  margin-bottom: 3rem;
+}
+
+.title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 68px;
+  color: #0e73f6;
+  margin-bottom: 34px;
+}
+
+.block {
+  display: grid;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 32px;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 11px;
+  min-width: 392px;
+}
+
+.filter {
+  padding: 10px;
+}
+
+.filterTodos{
+  border: 1px solid #e6e6e6;
+  padding: 5px;
+  border-radius: 6px;
+}
+
+.input {
+  padding: 0 16px;
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 6px;
+  width: 320px;
+  height: 40px;
+}
+
+.add {
+  width: 60px;
+  height: 40px;
+  background: #4094f7;
+  border-radius: 6px;
+  color: white;
+}
+
+.todosList {
+  margin-bottom: 11px;
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 24px;
+  width: 392px;
+  height: 48px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  margin-bottom: 11px;
+}
+
+.todo:last-child {
+  margin-bottom: 0;
+}
+
+.todo_input {
+  flex-grow: 1;
+}
+
+.notEditable {
+  pointer-events: none;
+}
+
+.delete, .cansel, .edit, .save {
+  color: #3c3c3c;
+}
+
+.clear {
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.006em;
+  color: #0e73f6;
+  width: max-content;
+  margin: 0 auto;
+}
+
+/* =================================================== */
+
+.completedTask {
+  background-color: #7df76f;
+}
+
+.none {
+  display: none;
+}
+
+.dragHovered {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.dragStarted {
+  opacity: 0.4;
+}
