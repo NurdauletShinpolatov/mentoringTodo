@@ -1,13 +1,22 @@
 const form = document.querySelector(".form");
 const inputAdd = document.querySelector(".input");
-const tasksList = document.querySelector(".todosList");
+const tasksList = document.querySelector(".tasksList");
 
 let tasks = [
   {
-    value: "bir"
+    id: "aaaa_1",
+    value: "bir",
+    completed: false  
   },
   {
-    value: "ikki"
+    id: "asdsafsdjh",
+    value: "ikki",
+    completed: false
+  },
+  {
+    id: "hfsdasdf",
+    value: "uch",
+    completed: false
   }
 ]
 
@@ -34,7 +43,7 @@ const render = () => {
   tasksList.innerHTML = ""
   tasks.forEach(item => {
     tasksList.innerHTML += `
-      <li class="todo">
+      <li class="todo" id=${item.id}>
         <input class="toggleCheck" type="checkbox" />
         <input value=${item.value} class="todo_input" type="text" />
         <div class="save none">
@@ -55,3 +64,20 @@ const render = () => {
 }
 
 render()
+
+const clickHandler = (e) => {
+  const taskId = e.target.closest(".todo").id;
+  tasks = tasks.map(item => {
+    if (item.id == taskId) {
+       return {
+        id: item.id,
+        value: item.value,
+        completed: !item.completed,
+      }
+    } else {
+      return item
+    }
+  })
+}
+
+tasksList.addEventListener("click", clickHandler)
