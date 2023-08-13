@@ -1,8 +1,318 @@
+// const arr = [1, 2, 3, 4, 5];
+// let newArr = []
 
-Aziz:
-- add
-- clear all
-- (delete/edit/save/cancel/complete/uncomplete)
+// // for(let i =0; i < arr.length; i++){
+// //     newArr.push(arr[i] * arr[i]);
+// // }
+// // console.log(newArr);
 
-Nurdaulet:
-- json stringify bilan stringga aylantirsa boladimi?
+// const newMap = arr.map(item => {
+//     return item * item
+// })
+
+// console.log(newMap);
+
+// const arr = [5,4,3,2,1]
+// const newArr = []
+
+// for(let i = 0; i < arr.length; i++){
+//    if (arr[i] == 1) {
+//      newArr.push("bir");
+//    } else if (arr[i] == 2) {
+//      newArr.push("ikki");
+//    } else if (arr[i] == 3) {
+//      newArr.push("uch");
+//    } else if (arr[i] == 4) {
+//      newArr.push("tort");
+//    } else if (arr[i] == 5) {
+//      newArr.push("besh");
+//    }
+// }
+
+// const newMap = arr.map(item =>{
+//     if(item == 1){
+//         return "Bir"
+//     } else if(item == 2){
+//         return "ikki"
+//     } else if(item == 3){
+//         return "uch"
+//     } else if(item == 4){
+//         return "tort"
+//     } else if(item == 5){
+//         return "Besh"
+//     } else{
+//         return "hec narsa topilmadi :)"
+//     }
+// })
+
+// const newMap = arr.map(item =>{
+//         return 2 * item
+// })
+
+// console.log(newMap);
+
+// console.log(arr);
+// console.log(newArr);
+
+//////////////////////////// Masalalar //////////////////////////////
+
+// 2.	Massivni qabul qiluvchi, a dan katta yoki teng va b dan kichik yoki teng elementlarni qidiradigan va
+// -natijani massiv sifatida qaytaruvchi filterRange(arr, a, b) funksiyasini yozing.
+// let arrNum = [5, 3, 8, 1];
+
+// // 2.	Kamayish tartibida saralash
+
+// const numbers = [40, 100, 1, 5, 25, 10];
+// numbers.sort(function (a, b) {
+//   return a - b;
+// });
+// // console.log(numbers);
+
+// const names = ["Said", "Asadbek", "Bahrom", "Farux"];
+// names.sort();
+// // console.log(names);
+
+// // 2+: kamayish tartibi
+
+// const number = [40, 100, 1, 5, 25, 10];
+// number.sort(function (a, b) {
+//   return b - a;
+// });
+// // console.log(number);
+
+// // 3.2.	Bizda arr qatorlari bor. Saralangan nusxani olishingiz kerak, lekin arr ni o'zgarishsiz qoldiring.
+
+// let arrTag = ["HTML", "JavaScript", "CSS"];
+
+// // Nusxasi
+// const sorteds = arrTag.slice()
+// //
+// const copysorted = (sort) => sorteds.sort()
+
+// // console.log(copysorted(sorteds));
+// // console.log(arrTag);
+
+// const newMap = arr.map((item) => {
+//   if (item % 2 === 0) {
+//     arr.push("juft");
+//   } else if (item % 1 === 0) {
+//     arr.push("toq");
+//   }
+// });
+// console.log(newMap);
+
+/////////////////////////////////////////////////////////////////////
+
+// Uyga vazifa 07.07.2023
+
+let arr = [32, 43, 45, 36, 21, 3, 2, 34, 75, 1, 9, 5];
+let addArr = [];
+
+// 1. Arrayni har bitta elementini consolega 5 songa katta qilib chiqaring
+// const newMap = arr.map(item => item + 5)
+// console.log(newMap);
+    // for(let i =0; i <arr.length; i++){
+    //     console.log(arr[i] +5 );
+    // }
+
+
+
+// 2. Arrayni toq sonlarini consolega chiqaring
+// Loop
+// for (var i = 0; i < arr.length; i++) {
+//   if (arr[i] % 2 === 1) {
+//     addArr.push(arr[i]);
+//   }
+// }
+// console.log(addArr);
+
+// Filter
+// const newFilter = arr.filter((item) => {
+//   return item % 2 == 1;
+// });
+
+// console.log(newFilter);
+
+
+
+// const arrNum = [1,2,3,4,5,6]
+// console.log(arrNum.map(item => {
+//     return item % 2 == 1
+// }));
+
+
+
+
+//   3. Arrayni toq sonlariga 2 sonini qoshib, juft sonlarga 4 sonini qoshib chiqaring
+
+const oddNum = [];
+const evenNum = [];
+
+// Loop
+// for (let i = 0; i < arr.length; i++) {
+//   if (arr[i] % 2 == 1) {
+//     oddNum.push(arr[i] + 2);
+//   } else if (arr[i] % 2 == 0) {
+//     oddNum.push(arr[i] + 4);
+//   }
+// }
+// console.log(oddNum);
+
+// const newMap = arr.map(item => {
+//     if(item % 3 == 0){
+//         return item + 3
+//     } else if(item % 3 == 1) {
+//         return item + 1
+//     } else {
+//         return item + 2
+//     }
+// })
+// console.log(newMap);
+
+
+
+
+
+
+
+// 4. Arrayni toq sonlarini va juft sonlarini bo’lak chiqaring
+
+// Loop
+// for (let i = 0; i < arr.length; i++) {
+//   if (arr[i] % 2 == 1) {
+//     oddNum.push(arr[i]);
+//   } else {
+//     evenNum.push(arr[i]);
+//   }
+// }
+// console.log(oddNum);
+// console.log(evenNum);
+
+// Filter method
+// const newFilter = arr.filter((item) => {
+//   if (item % 2 === 0) {
+//     return oddNum.push(item);
+//   } else if (item % 2 === 1) {
+//     return evenNum.push(item);
+//   }
+// });
+// console.log(newFilter);
+// console.log(oddNum);
+// console.log(evenNum);
+
+
+// 5. n sonining arraydagi indexini consolega chiqaring. (n soni arraydagi sonlardan biri boladi)
+// n = 45, javob: 2
+// n = 32, javob: 0
+
+// let n = 45
+// let n = 32
+
+// const indexOf = arr.indexOf(n)
+// console.log(indexOf);
+
+
+// for (let i = 0; i < arr.length; i++) {
+//   if (n == arr[i]){
+//     console.log(i);
+//   }
+// }
+
+// 6. N soni arrayda bor yoki yoqligini consolega chiqaring. (includes metodidan foydalanmasdan)
+
+// let n = 123
+//  let n = 32
+
+// const ars = arr.some(item => item > n)
+// let boolens = ars ? "javob: bor" : "Javob: Yoq";
+// console.log(boolens);
+
+// for(let i = 0; i < arr.length; i++){
+//     if(arr[i] == n){
+//         console.log(arr[i]);
+//     }
+// }
+
+
+
+// ////////////////////////////////////////////////////////////////
+
+// 7. arraydagi 20 dan katta bolgan sonlarni consolega chiqaring
+
+// Loop
+// for(let i = 0; i < arr.length; i++){
+//   if(arr[i] > 20){
+//     console.log(arr[i]);
+//   }
+// }
+
+// Filter
+
+// const newFilter = arr.filter(item => item > 20 ? item : '')
+// console.log(newFilter);
+
+
+// /////////////////////////////////////////////////////////////////
+// 8. arraydagi n dan kichik bolgan sonlarni consolega chiqaring
+// n = 10, javob: [3, 2, 1, 9, 5]
+// let n = 10
+
+// Loop
+// for(let i = 0; i< arr.length; i++){
+//   arr[i] < n ? console.log(arr[i]) : ''
+// }
+
+// Filter
+// const newFilter = arr.filter(item => item < n ? item : '')
+// console.log(newFilter);
+
+
+
+
+// //////////////////////////////////////////////////////////////////////
+// 9. araydagi 30 dan 40 gacha bolgan sonlarni consolega chiqaring
+// [32, 36, ...]
+
+
+// Loop
+// for(let i = 0; i < arr.length; i++){
+//   if(arr[i] > 30 && arr[i] < 40){
+//     console.log(arr[i]);
+//   }
+// }
+
+
+// filter
+
+// const newFilter = arr.filter(item =>{
+//   if(item > 30 && item < 40){
+//     return item
+//   }
+// })
+// console.log(newFilter);
+
+
+
+
+// 10. arraydagi a dan b gacha bolgan sonlarni consolega chiqaring
+// a = 20, b =30, javob: [21]
+
+let a = 20
+let b = 30
+
+// Loop
+// for(let i = 0; i < arr.length; i++){
+//   if(arr[i] > a && arr[i]< b){
+//     console.log(arr[i]);
+//   }
+// }
+
+// Filter
+// const newFilter = arr.filter(item =>{
+//   if(item > a && item < b){
+//     return item
+//   }
+// })
+// console.log(newFilter);
+
+// Map 

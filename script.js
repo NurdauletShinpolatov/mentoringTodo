@@ -1,6 +1,7 @@
 const form = document.querySelector(".form");
 const inputAdd = document.querySelector(".input");
 const tasksList = document.querySelector(".tasksList");
+const clearBtn = document.querySelector(".clear");
 
 let tasks = [
   {
@@ -36,7 +37,6 @@ const clearAll = () => {
   render()
 }
 
-form.addEventListener("submit", addNewTask);
 
 const render = () => {
   console.log("render ishlavotti");
@@ -46,10 +46,10 @@ const render = () => {
       <li class="todo" id=${item.id}>
         <input class="toggleCheck" type="checkbox" />
         <input value=${item.value} class="todo_input" type="text" />
-        <div class="save none">
+        <div class="save ">
             <i class='bx bx-sm bxs-save'></i>
         </div>
-        <div class="cancel none">
+        <div class="cancel">
             <i class='bx bx-sm bx-x'></i>
         </div>
         <div class="edit">
@@ -66,18 +66,26 @@ const render = () => {
 render()
 
 const clickHandler = (e) => {
-  const taskId = e.target.closest(".todo").id;
-  tasks = tasks.map(item => {
-    if (item.id == taskId) {
-       return {
-        id: item.id,
-        value: item.value,
-        completed: !item.completed,
-      }
-    } else {
-      return item
-    }
-  })
+    console.log(e.target.closest(".toggleCheck"));
+    const taskId = e.target.closest(".todo").id;
+    
+    if (e.target.closest(".toggleCheck")) {
+        tasks = tasks.map(item => {
+            if (item.id == taskId) {
+            return {
+                id: item.id,
+                value: item.value,
+                completed: !item.completed,
+            }
+            } else {
+            return item
+            }
+        })
+    } else if (e.target.closest(".delete")){
+        tasks = tasks.filter(item => item.id !== taskId)
+        render()
+    } 
 }
 
 tasksList.addEventListener("click", clickHandler)
+clearBtn.addEventListener("click", clearAll);
