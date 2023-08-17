@@ -1,3 +1,6 @@
+// question: why Date.now() gives the same id to two objects
+// jquery
+
 // const arr = [1, 2, 3, 4, 5];
 // let newArr = []
 
